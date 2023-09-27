@@ -1,0 +1,6 @@
+C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/CMakeFiles/axoDB.dir
+C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/CMakeFiles/main.dir
+C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/CMakeFiles/allocator_test.dir
+C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/CMakeFiles/test.dir
+C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/CMakeFiles/rebuild_cache.dir
