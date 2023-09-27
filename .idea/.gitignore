@@ -1,0 +1,42 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+build/
+
+# Ignore CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore compiled dynamic libraries
+*.so
+*.dylib
+
+# Ignore compiled static libraries
+*.a
+*.lib
+
+# Ignore executable binaries
+*
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore CLion settings
+.idea/
+
+# Ignore other files that may be generated during build or testing
+*.log
+*.tmp
