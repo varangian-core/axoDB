@@ -2,8 +2,9 @@
 // Created by Yormingandr on 9/26/2023.
 //
 
-#include <cstdef>
-#include <cstint>
+#include <cstddef>
+#include <cstdint>
+#include <algorithm>
 
 namespace axodb {
 
@@ -15,8 +16,8 @@ namespace axodb {
         virtual ~Allocator() = default;
 
         virtual DataPointer Allocate(IndexType size) = 0;
-
-        virtual void Deallocate(Datapointer p, IndexType size) = 0;
+        virtual void Deallocate(DataPointer p, IndexType size) = 0;
+        virtual DataPointer ReallocateData(DataPointer pointer, IndexType old_size, IndexType new_size) = 0;
     };
 
 
@@ -27,9 +28,16 @@ namespace axodb {
         }
 
 
-        void Deallocate(Datapointer p, IndexType size) override {
-            delete[] p;
+        void Deallocate(DataPointer pointer, IndexType size) override {
+            delete[] pointer;
         }
+
+        DataPointer ReallocateData(DataPointer pointer, IndexType  old_size, IndexType  new_size) override {
+            DataPointer  new_pointer = new uint8_t[new_size];
+            std::copy(pointer, pointer + std::min(old_size, new_size), new_pointer);
+            delete[] pointer;
+            return new_pointer;
+            }
     };
 
 }
