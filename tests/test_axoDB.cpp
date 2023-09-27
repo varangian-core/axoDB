@@ -7,7 +7,7 @@
 //Should add gtest here
 
 int main() {
-    axodb::Allocator* allocator = new axodb:BasicAllocator();
+    axodb::Allocator* allocator = new axodb::BasicAllocator();
 
     axodb::IndexType size = 10; //change the size accordingly
     axodb::DataPointer ptr = allocator->Allocate(size);
