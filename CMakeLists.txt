@@ -25,3 +25,9 @@ FetchContent_Declare(
   GIT_TAG        release-1.11.0
 )
 FetchContent_MakeAvailable(googletest)
+
+# Generate a compile_commands.json file for code navigation and completion
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Enable debug symbols and disable optimizations for easier debugging
+set(CMAKE_BUILD_TYPE Debug)
