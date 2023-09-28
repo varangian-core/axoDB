@@ -1,68 +1,47 @@
 //
-// Created by Yormingandr on 9/26/2023.
-//
-//
-// Created by Yormingandr on 9/26/2023.
-//
+// Created by Yormingandr on 9/27/2023.
 
 #include "Buffer.h"
-#include "FileHandle.h"
-#include <cstring>
+#include <cstring> // For std::memcpy
+#include <stdexcept> // For std::invalid_argument
 
 namespace axodb {
 
     Buffer::Buffer(Allocator& allocator, FileBufferType type, uint64_t user_size)
-        : m_allocator(&allocator), m_type(type), m_user_size(user_size), m_buffer(nullptr), m_size(0) {
-        Resize(user_size);
+        : allocator_(allocator), type_(type), user_size_(user_size), buffer_(nullptr), size_(0) {
+        Resize(user_size_);
     }
 
     Buffer::Buffer(Buffer& source, FileBufferType type)
-        : m_allocator(source.m_allocator), m_type(type), m_user_size(source.m_user_size), m_buffer(nullptr), m_size(0) {
-        Resize(source.m_size);
-        std::memcpy(m_buffer, source.m_buffer, source.m_size);
+        : allocator_(source.allocator_), type_(type), user_size_(source.user_size_), buffer_(nullptr), size_(0) {
+        Resize(source.size_);
+        std::memcpy(buffer_, source.buffer_, source.size_);
     }
 
     Buffer::~Buffer() {
-        Clear();
+        if (buffer_) {
+            allocator_.Deallocate(static_cast<DataPointer>(buffer_), size_);
+        }
     }
 
     void Buffer::Resize(uint64_t new_size) {
-        if (new_size > m_user_size) {
+        if (new_size > user_size_) {
             throw std::invalid_argument("Buffer size exceeds user size");
         }
 
-        if (new_size > m_size) {
-            void* new_buffer = m_allocator->Allocate(new_size);
-            std::memcpy(new_buffer, m_buffer, m_size);
-            m_allocator->Deallocate(m_buffer);
-            m_buffer = new_buffer;
+        if (new_size > size_) {
+            DataPointer new_buffer = allocator_.Allocate(new_size);
+            if (buffer_) {
+                std::memcpy(new_buffer, static_cast<DataPointer>(buffer_), size_);
+                allocator_.Deallocate(static_cast<DataPointer>(buffer_), size_);
+            }
+            buffer_ = static_cast<void*>(new_buffer);
         }
 
-        m_size = new_size;
+        size_ = new_size;
     }
 
     void Buffer::Read(FileHandle& handle, uint64_t location) {
-        handle.Seek(location);
-        handle.Read(m_buffer, m_size);
-    }
-
-    void Buffer::Write(FileHandle& handle, uint64_t location) {
-        handle.Seek(location);
-        handle.Write(m_buffer, m_size);
-    }
-
-    void Buffer::Clear() {
-        if (m_buffer) {
-            m_allocator->Deallocate(m_buffer);
-            m_buffer = nullptr;
-            m_size = 0;
-        }
-    }
-
-    void Buffer::Initialize(DebugInitialize initialize) {
-        if (initialize == DebugInitialize::Zero) {
-            std::memset(m_buffer, 0, m_size);
-        }
-    }
-
+    handle.Read(location, size_, static_cast<uint8_t*>(buffer_)); 
+ }
 } // namespace axodb
