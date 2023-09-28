@@ -1,11 +1,11 @@
 //
 // Created by Yormingandr on 9/27/2023.
 //
-
 #ifndef AXODB_BUFFER_H
 #define AXODB_BUFFER_H
 
 #include "Allocator.h"
+#include "FileHandle.h" // Include this if FileHandle is used
 #include <cstdint>
 #include <cstddef>
 #include <stdexcept>
@@ -36,10 +36,17 @@ namespace axodb {
         ~Buffer();
 
         void Resize(uint64_t new_size);
-        void Read(/*FileHandle& handle,*/ uint64_t location);
-        void Write(/*FileHandle& handle,*/ uint64_t location);
+        void Read(FileHandle& handle, uint64_t location); // Uncommented
+        void Write(FileHandle& handle, uint64_t location); // Uncommented
         void Clear();
         void Initialize(DebugInitialize initialize);
+
+    private:
+        Allocator& allocator_;
+        FileBufferType type_;
+        uint64_t user_size_;
+        void* buffer_;
+        uint64_t size_;
     };
 
 } // namespace axodb

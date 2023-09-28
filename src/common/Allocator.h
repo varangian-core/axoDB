@@ -24,20 +24,9 @@ public:
 
 class BasicAllocator : public Allocator {
 public:
-    DataPointer Allocate(IndexType size) override {
-        return new uint8_t[size];
-    }
-
-    void Deallocate(DataPointer p, IndexType size) override {
-        delete[] p;
-    }
-
-    DataPointer Reallocate(DataPointer p, IndexType old_size, IndexType new_size) override {
-        DataPointer new_p = new uint8_t[new_size];
-        std::copy(p, p + std::min(old_size, new_size), new_p);
-        delete[] p;
-        return new_p;
-    }
+    DataPointer Allocate(IndexType size) override;
+    void Deallocate(DataPointer p, IndexType size) override;
+    DataPointer Reallocate(DataPointer p, IndexType old_size, IndexType new_size) override;
 };
 
 } // namespace axodb
