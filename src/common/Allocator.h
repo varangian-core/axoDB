@@ -8,24 +8,20 @@
 #include <cstddef>
 #include <cstdint>
 
-
 namespace axodb {
 
     using DataPointer = uint8_t*;
     using IndexType = size_t;
 
-
-
     class Allocator {
-    public :
+    public:
         virtual ~Allocator() = default;
         virtual DataPointer Allocate(IndexType size) = 0;
-        virtual void Deallocate(DataPointer p , IndexType size) = 0;
+        virtual void Deallocate(DataPointer p, IndexType size) = 0;
     };
 
-
     class BasicAllocator : public Allocator {
-    public :
+    public:
         DataPointer Allocate(IndexType size) override {
             return new uint8_t[size];
         }
@@ -34,5 +30,6 @@ namespace axodb {
             delete[] p;
         }
     };
-}
-#endif //AXODB_ALLOCATOR_H
+} // namespace axodb
+
+#endif // AXODB_ALLOCATOR_H

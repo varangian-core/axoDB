@@ -1,23 +1,23 @@
-# CMakeLists.txt for axodb project
-
-# Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.10)
 
-# Set the project name and version
-project(axodb VERSION 1.0)
+project(axoDB)
 
-# Set the C++ standard and required features
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Add subdirectories for each component of the project
-# The 'src' directory contains the source code for the main executable
-# The 'tests' directory contains the source code for the unit tests
-add_subdirectory(src)
-add_subdirectory(tests)
+# Add the source files for your project
+add_executable(axoDB
+  src/main.cpp
+  src/common/Allocator.cpp
+  src/common/Buffer.cpp
+)
 
-# Use FetchContent to download and build gtest
-# This will download and build the Google Test framework as part of the CMake build process
+# Add the include directories for your project
+target_include_directories(axoDB PRIVATE
+  ${PROJECT_SOURCE_DIR}/src
+  ${PROJECT_SOURCE_DIR}/src/common
+)
+
+# Download and build the Google Test library
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -26,11 +26,22 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-# Generate a compile_commands.json file for code navigation and completion
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+# Add the test executable
+add_executable(axoDB_test
+  tests/test_axoDB.cpp
+  src/common/Allocator.cpp
+  src/common/Buffer.cpp
+)
 
-# Enable debug symbols and disable optimizations for easier debugging
-set(CMAKE_BUILD_TYPE Debug)
+# Add the include directories for the test executable
+target_include_directories(axoDB_test PRIVATE
+  ${PROJECT_SOURCE_DIR}/src
+  ${PROJECT_SOURCE_DIR}/src/common
+  ${googletest_SOURCE_DIR}/googletest/include
+)
 
-# Set the runtime library to MultiThreadedDebugDLL for all targets
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDebugDLL")
+# Link the test executable with the Google Test library
+target_link_libraries(axoDB_test PRIVATE gtest_main)
+
+# Add a test
+add_test(NAME axoDB_test COMMAND axoDB_test)
