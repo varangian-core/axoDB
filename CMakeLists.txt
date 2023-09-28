@@ -31,3 +31,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Enable debug symbols and disable optimizations for easier debugging
 set(CMAKE_BUILD_TYPE Debug)
+
+# Set the runtime library to MultiThreadedDebugDLL for all targets
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDebugDLL")
