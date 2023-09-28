@@ -1,28 +1,47 @@
-//
-// Created by Yormingandr on 9/26/2023.
-//
+// test_axoDB.cpp
 
 #include "../src/common/Allocator.h"
-#include <cassert>
-//Should add gtest here
+#include <gtest/gtest.h>
 
-int main() {
-    axodb::Allocator* allocator = new axodb::BasicAllocator();
+// Define a fixture for the tests
+class AllocatorTest : public ::testing::Test {
+protected:
+    void SetUp() override {
+        // Create a new allocator for each test
+        allocator = new axodb::BasicAllocator();
+    }
 
-    axodb::IndexType size = 10; //change the size accordingly
+    void TearDown() override {
+        // Delete the allocator after each test
+        delete allocator;
+    }
+
+    axodb::Allocator* allocator;
+};
+
+// Test the Allocate and Deallocate methods
+TEST_F(AllocatorTest, AllocateAndDeallocate) {
+    // Arrange
+    axodb::IndexType size = 10;
     axodb::DataPointer ptr = allocator->Allocate(size);
 
-    for (axodb::IndexType i =0 ; i < size; ++i) {
+    // Act
+    // Check that the pointer is not null
+    ASSERT_NE(ptr, nullptr);
+
+    // Check that the allocated memory is writable
+    for (axodb::IndexType i = 0; i < size; ++i) {
         ptr[i] = static_cast<uint8_t>(i);
     }
 
-    for (axodb::IndexType i =0 ; i < size; ++i) {
-        assert(ptr[i] = i);
+    // Check that the allocated memory is readable
+    for (axodb::IndexType i = 0; i < size; ++i) {
+        ASSERT_EQ(ptr[i], static_cast<uint8_t>(i));
     }
 
-    allocator->Deallocate(ptr,size);
-    delete allocator;
+    allocator->Deallocate(ptr, size);
 
-    return 0;
+    // Assert
+    // Check that the pointer is null after deallocation
+    ASSERT_EQ(ptr, nullptr);
 }
-
