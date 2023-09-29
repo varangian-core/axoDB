@@ -1,5 +1,3 @@
-#pragma once
-
 #include <cstdint>
 
 typedef uint64_t page_id_t;
