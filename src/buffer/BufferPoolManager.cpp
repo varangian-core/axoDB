@@ -1,4 +1,5 @@
 #include "BufferPoolManager.h"
+#include "Page.h"
 
 BufferPoolManager::BufferPoolManager(size_t pool_size, DiskManager *disk_manager)
     : pool_size_(pool_size), disk_manager_(disk_manager) {}
@@ -15,19 +16,10 @@ Page *BufferPoolManager::NewPage() {
     }
     page_id_t page_id = disk_manager_->AllocatePage();
     std::unique_ptr<char[]> data(new char[DiskManager::PAGE_SIZE]);
-    Page *page = new Page(page_id, std::move(data));
+    Page *page = new Page(page_id, data.get()); // Get the raw pointer
+    data.release(); // Release ownership
     page_table_[page_id] = std::shared_ptr<Page>(page);
     return page;
-}
-
-bool BufferPoolManager::DeletePage(page_id_t page_id) {
-    auto it = page_table_.find(page_id);
-    if (it == page_table_.end()) {
-        return false;
-    }
-    disk_manager_->DeallocatePage(page_id);
-    page_table_.erase(it);
-    return true;
 }
 
 Page *BufferPoolManager::FetchPage(page_id_t page_id) {
@@ -40,10 +32,12 @@ Page *BufferPoolManager::FetchPage(page_id_t page_id) {
     if (!disk_manager_->ReadPage(page_id, data.get())) {
         return nullptr;
     }
-    Page *page = new Page(page_id, std::move(data));
+    Page *page = new Page(page_id, data.get()); // Get the raw pointer
+    data.release(); // Release ownership
     page_table_[page_id] = std::shared_ptr<Page>(page);
     return page;
 }
+
 
 bool BufferPoolManager::UnpinPage(page_id_t page_id, bool is_dirty) {
     std::unique_lock<std::mutex> latch(latch_);
