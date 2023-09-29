@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/axoDB")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,14 +35,6 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/Users/Yormingandr/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/232.9559.58/bin/mingw/bin/objdump.exe")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/src/cmake_install.cmake")
-  include("C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/tests/cmake_install.cmake")
-  include("C:/Users/Yormingandr/CLionProjects/axoDB/cmake-build-debug/_deps/googletest-build/cmake_install.cmake")
-
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

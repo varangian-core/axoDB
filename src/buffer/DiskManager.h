@@ -3,6 +3,7 @@
 
 #include <string>
 #include <fstream>
+#include <cstdint>
 
 // Define the page_id_t type
 using page_id_t = uint64_t;

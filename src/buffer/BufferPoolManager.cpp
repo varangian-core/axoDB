@@ -45,7 +45,7 @@ bool BufferPoolManager::UnpinPage(page_id_t page_id, bool is_dirty) {
     if (it == page_table_.end()) {
         return false;
     }
-    return it->second->Unpin(is_dirty);
+    it->second.get()->Unpin(is_dirty);
 }
 
 bool BufferPoolManager::FlushPage(page_id_t page_id) {

@@ -1,4 +1,5 @@
 #include "DiskManager.h"
+#include "Page.h"
 #include <iostream>
 
 DiskManager::DiskManager(const std::string& file_path)

@@ -5,6 +5,7 @@
 #include "DiskManager.h"
 #include <unordered_map>
 #include <mutex>
+#include <memory>
 
 class BufferPoolManager {
 public:
