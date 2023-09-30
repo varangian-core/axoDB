@@ -2,10 +2,14 @@
 // Created by Yormingandr on 9/29/2023.
 //
 #include "Btree.h"
-#include "BufferFrame.h"
 
 template<typename KeyType, typename ValueType>
 page_id_t Btree<KeyType, ValueType>::GetPageId() const {
+    return root_->page_id_;
+}
+
+template<typename KeyType, typename ValueType>
+page_id_t Btree<KeyType, ValueType>::GetRootPageID() const {
     return root_->page_id_;
 }
 

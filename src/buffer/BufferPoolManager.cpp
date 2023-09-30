@@ -1,5 +1,6 @@
 #include "BufferPoolManager.h"
 #include "Page.h"
+#include "BufferFrame.h"
 
 BufferPoolManager::BufferPoolManager(size_t pool_size, DiskManager *disk_manager)
     : pool_size_(pool_size), disk_manager_(disk_manager) {}
@@ -72,3 +73,4 @@ void BufferPoolManager::FlushAllPages() {
         }
     }
 }
+

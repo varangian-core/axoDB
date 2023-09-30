@@ -20,6 +20,7 @@ public:
     std::vector<ValueType> Find(const KeyType& key) const;
     void Remove(const KeyType& key);
     page_id_t GetPageId() const;
+    page_id_t GetRootPageID() const;
 
 private:
     struct Node {
