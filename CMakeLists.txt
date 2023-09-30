@@ -8,7 +8,9 @@ set(CMAKE_CXX_STANDARD 17)
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 
 # Add the source files for your project
-add_executable(axoDB ${SOURCES})
+add_executable(axoDB ${SOURCES}
+        src/common/Btree.cpp
+        src/common/Btree.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE
