@@ -5,7 +5,7 @@
 #define AXODB_BUFFER_H
 
 #include "Allocator.h"
-#include "FileHandle.h" // Include this if FileHandle is used
+#include "FileHandle.h"
 #include <cstdint>
 #include <cstddef>
 #include <stdexcept>

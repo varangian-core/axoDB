@@ -1,6 +1,6 @@
 
 #include "Index.h"
-#include "BTree.h"
+#include "Btree.h"
 #include "BufferPoolManager.h"
 
 template <typename KeyType, typename ValueType>
@@ -19,6 +19,6 @@ public:
   virtual std::vector<ValueType> Find(const KeyType& key) const;
 
 private:
-  BTree<KeyType, ValueType> btree_;
+  Btree<KeyType, ValueType> btree_;
   BufferPoolManager* buffer_pool_manager_;
 };
