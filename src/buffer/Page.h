@@ -1,10 +1,14 @@
 #include <cstdint>
 
+
+#ifndef PAGE_H
+#define PAGE_H
+
 typedef uint64_t page_id_t;
 
 class Page {
 public:
-    Page(page_id_t page_id, char *data);
+    explicit Page(page_id_t page_id, char *data);
 
     ~Page();
 
@@ -28,3 +32,5 @@ private:
     bool is_dirty_;
     bool is_pinned_;
 };
+
+#endif

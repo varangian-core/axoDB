@@ -97,7 +97,7 @@ std::vector<ValueType> Btree<KeyType, ValueType>::Find(const KeyType& key) const
 
 template <typename KeyType, typename ValueType>
 void Btree<KeyType, ValueType>::Remove(const KeyType& key) {
-    Remove(root_, key);
+    RemoveNonFull(root_, key);
 
     //if root node has 0 keys, make the first child a root
     if (root_->keys.size() == 0 && !root_->isLeaf) {
@@ -148,3 +148,5 @@ void Btree<KeyType, ValueType>::RemoveNonFull(std::shared_ptr<Node> node, const 
         }
     }
 }
+
+template class Btree<int, int>;

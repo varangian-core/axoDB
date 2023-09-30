@@ -24,6 +24,7 @@ public:
 
 private:
     struct Node {
+        void RemoveNonFull(std::shared_ptr<Node>, const KeyType& key);
         bool isLeaf;
         page_id_t page_id_;
         std::vector<KeyType> keys;
