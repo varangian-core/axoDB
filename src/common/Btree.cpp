@@ -2,6 +2,12 @@
 // Created by Yormingandr on 9/29/2023.
 //
 #include "Btree.h"
+#include "BufferFrame.h"
+
+template<typename KeyType, typename ValueType>
+page_id_t Btree<KeyType, ValueType>::GetPageId() const {
+    return root_->page_id_;
+}
 
 template<typename KeyType, typename ValueType>
 Btree<KeyType, ValueType>::Btree(size_t order)
@@ -96,6 +102,7 @@ void Btree<KeyType, ValueType>::Remove(const KeyType& key) {
 }
 
 
+
 template<typename KeyType, typename ValueType>
 void Btree<KeyType, ValueType>::RemoveNonFull(std::shared_ptr<Node> node, const KeyType& key) {
     int i = 0;
@@ -131,6 +138,9 @@ void Btree<KeyType, ValueType>::RemoveNonFull(std::shared_ptr<Node> node, const 
                 leftChild->keys.insert(leftChild->keys.end(), rightChild->keys.begin(), rightChild->keys.end());
                 leftChild->values.insert(leftChild->values.end(), rightChild->values.begin(), rightChild->values.end());
                 if (!leftChild->isLeaf) {
-                    leftChild->children.insert(leftChild->children.end(), rightChild->children.begin(), rightChild->children.end(
-
-
+                    leftChild->children.insert(leftChild->children.end(), rightChild->children.begin(), rightChild->children.end());
+                }
+            }
+        }
+    }
+}

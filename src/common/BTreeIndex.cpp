@@ -1,4 +1,5 @@
 #include "BTreeIndex.h"
+#include "BufferFrame.h"
 
 template <typename KeyType, typename ValueType>
 BTreeIndex<KeyType, ValueType>::BTreeIndex(size_t order, BufferPoolManager* buffer_pool_manager)
@@ -13,9 +14,8 @@ void BTreeIndex<KeyType, ValueType>::Insert(const KeyType& key, const ValueType&
   btree_.Insert(key, value);
 
   // Flush the B-tree root page to disk
-  BufferFrame* root_buffer = buffer_pool_manager_->GetPage(btree_.GetRootPageID());
-  buffer_pool_manager_->WritePage(root_buffer);
-  buffer_pool_manager_->ReleasePage(root_buffer);
+  BufferFrame* root_buffer = buffer_pool_manager_->FetchPage(btree_.GetRootPageID());
+  buffer_pool_manager_->FlushPage(root_buffer->GetPageId());
 }
 
 template <typename KeyType, typename ValueType>
@@ -24,9 +24,8 @@ void BTreeIndex<KeyType, ValueType>::Remove(const KeyType& key, const ValueType&
   btree_.Remove(key, value);
 
   // Flush the B-tree root page to disk
-  BufferFrame* root_buffer = buffer_pool_manager_->GetPage(btree_.GetRootPageID());
-  buffer_pool_manager_->WritePage(root_buffer);
-  buffer_pool_manager_->ReleasePage(root_buffer);
+  BufferFrame* root_buffer = buffer_pool_manager_->FetchPage(btree_.GetRootPageID());
+    buffer_pool_manager_->FlushPage(root_buffer->GetPageId());
 }
 
 template <typename KeyType, typename ValueType>

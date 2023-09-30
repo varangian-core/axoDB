@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <memory>
+#include "BufferFrame.h"
 
 template<typename KeyType, typename ValueType>
 class Btree {
@@ -18,15 +19,16 @@ public:
     void Insert(const KeyType& key, const ValueType& value);
     std::vector<ValueType> Find(const KeyType& key) const;
     void Remove(const KeyType& key);
+    page_id_t GetPageId() const;
 
 private:
     struct Node {
         bool isLeaf;
+        page_id_t page_id_;
         std::vector<KeyType> keys;
         std::vector<ValueType> values;
         std::vector<std::shared_ptr<Node>> children;
 
-        Node(bool isLeaf) : isLeaf(isLeaf) {}
     };
 
     size_t order_;
