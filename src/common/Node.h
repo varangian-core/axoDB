@@ -14,7 +14,7 @@ class Btree;
 
 template<typename KeyType, typename ValueType>
 class Node {
-    Node(bool isLeafFlag);
+    Node(bool isLeafFlag) : isLeaf(isLeafFlag) {};
     friend class Btree<KeyType, ValueType>;
 
 
