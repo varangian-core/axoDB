@@ -16,13 +16,16 @@ add_executable(axoDB ${SOURCES}
         src/common/Node.cpp
         src/common/Node.h
         src/concurrency/TransactionManager.cpp
-        src/concurrency/TransactionManager.h)
+        src/concurrency/TransactionManager.h
+        src/concurrency/LogManager.cpp
+        src/concurrency/LogManager.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE
         ${PROJECT_SOURCE_DIR}/src
         ${PROJECT_SOURCE_DIR}/src/common
         ${PROJECT_SOURCE_DIR}/src/buffer
+        ${PROJECT_SOURCE_DIR}/src/concurrency
 )
 
 # Platform-specific dependencies and settings
