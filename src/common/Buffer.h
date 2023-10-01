@@ -36,8 +36,8 @@ namespace axodb {
         ~Buffer();
 
         void Resize(uint64_t new_size);
-        void Read(FileHandle& handle, uint64_t location); // Uncommented
-        void Write(FileHandle& handle, uint64_t location); // Uncommented
+        void Read(FileHandle& handle, uint64_t location);
+        void Write(FileHandle& handle, uint64_t location);
         void Clear();
         void Initialize(DebugInitialize initialize);
 

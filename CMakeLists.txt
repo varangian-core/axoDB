@@ -14,7 +14,9 @@ add_executable(axoDB ${SOURCES}
         src/common/BufferFrame.cpp
         src/common/BufferFrame.h
         src/common/Node.cpp
-        src/common/Node.h)
+        src/common/Node.h
+        src/concurrency/TransactionManager.cpp
+        src/concurrency/TransactionManager.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE
