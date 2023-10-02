@@ -6,9 +6,10 @@
 #define AXODB_LOGMANAGER_H
 
 #include <fstream>
-#include <vector>
-#include <mutex>
 #include <string>
+#include <vector>
+#include <set>
+#include <mutex>
 
 namespace axodb {
 
@@ -19,20 +20,21 @@ namespace axodb {
         std::string oldValue;
         std::string newValue;
         enum class LogType {
-            BEGIN,
-            COMMIT,
-            ABORT,
-            UPDATE
-        } type;  // Added 'type' member to the struct
+            INSERT,
+            UPDATE,
+            DELETE,
+            CHECKPOINT  // Assuming you have a CHECKPOINT type
+        } type;
     };
 
     class LogManager {
     public:
-        LogManager(const std::string& logFileName);
+        explicit LogManager(const std::string &logFileName);
         ~LogManager();
 
-        void AppendLog(const LogRecord& record);
+        void AppendLog(const LogRecord &record);
         std::vector<LogRecord> ReadLogs();
+        std::set<int> GetActiveTransactions();  // Declaration of the method
 
     private:
         std::string logFileName_;
