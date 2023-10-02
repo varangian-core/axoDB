@@ -22,7 +22,9 @@ add_executable(axoDB ${SOURCES}
         src/concurrency/LockManager.cpp
         src/concurrency/LockManager.h
         src/concurrency/RecoveryManager.cpp
-        src/concurrency/RecoveryManager.h)
+        src/concurrency/RecoveryManager.h
+        src/concurrency/CheckpointManager.cpp
+        src/concurrency/CheckpointManager.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE

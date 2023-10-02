@@ -1,14 +1,12 @@
 //
 // Created by Yormingandr on 10/1/2023.
 //
-
 #ifndef AXODB_LOCKMANAGER_H
 #define AXODB_LOCKMANAGER_H
 
 #include <unordered_map>
 #include <mutex>
 #include <condition_variable>
-
 
 namespace axodb {
 
@@ -17,14 +15,14 @@ namespace axodb {
         EXCLUSIVE
     };
 
-
     class LockManager {
     public:
         LockManager() = default;
 
         bool AcquireLock(int resourceId, int transactionId, LockType lockType);
-
         void ReleaseLock(int resourceId, int transactionId);
+
+        std::set<int> GetActiveTransactions();
 
     private:
         struct LockInfo {
@@ -38,6 +36,5 @@ namespace axodb {
         std::condition_variable cv_;
     };
 }
-
 
 #endif //AXODB_LOCKMANAGER_H
