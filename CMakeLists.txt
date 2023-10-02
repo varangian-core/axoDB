@@ -18,7 +18,9 @@ add_executable(axoDB ${SOURCES}
         src/concurrency/TransactionManager.cpp
         src/concurrency/TransactionManager.h
         src/concurrency/LogManager.cpp
-        src/concurrency/LogManager.h)
+        src/concurrency/LogManager.h
+        src/concurrency/LockManager.cpp
+        src/concurrency/LockManager.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE

@@ -6,6 +6,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <vector>
+#include <string>
 
 struct LogRecord {
     int transactionId;
