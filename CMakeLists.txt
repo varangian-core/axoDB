@@ -28,7 +28,11 @@ add_executable(axoDB ${SOURCES}
         src/concurrency/VersionManager.cpp
         src/concurrency/VersionManager.h
         src/concurrency/TimestampManager.cpp
-        src/concurrency/TimestampManager.h)
+        src/concurrency/TimestampManager.h
+        src/query/QueryParser.cpp
+        src/query/QueryParser.h
+        src/query/AST.cpp
+        src/query/AST.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE
