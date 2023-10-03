@@ -27,11 +27,9 @@ namespace axodb {
         std::string token;
         std::istringstream tokenStream(query);
 
-        while (std::getline(tokenStrema, token, ' ') {
+        while (std::getline(tokenStream, token, ' ') {
             tokens.push_back(token);
         }
         return token;
     }
-} // namespace axodb
-
-
+}; // namespace axodb

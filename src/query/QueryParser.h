@@ -11,14 +11,15 @@
 
 namespace axodb {
 
-class QueryParser {
-public:
-    AST parse(const std::string& query);
+    class QueryParser {
+    public:
+        AST parse(const std::string &query);
 
 
-private:
-    std::vector<std::string> split(const std::string& str, const std::string& delim);
-};
+    private:
+        std::vector<std::string> split(const std::string &str, const std::string &delim);
+    };
+}
 
 
 #endif //AXODB_QUERYPARSER_H

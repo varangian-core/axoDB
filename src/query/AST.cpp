@@ -3,3 +3,7 @@
 //
 
 #include "AST.h"
+
+namespace axodb {
+    //Not implemented yet
+}
