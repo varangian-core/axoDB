@@ -26,7 +26,9 @@ add_executable(axoDB ${SOURCES}
         src/concurrency/CheckpointManager.cpp
         src/concurrency/CheckpointManager.h
         src/concurrency/VersionManager.cpp
-        src/concurrency/VersionManager.h)
+        src/concurrency/VersionManager.h
+        src/concurrency/TimestampManager.cpp
+        src/concurrency/TimestampManager.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE
