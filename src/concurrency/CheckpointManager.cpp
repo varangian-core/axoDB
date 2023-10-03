@@ -12,7 +12,6 @@ namespace axodb {
         std::lock_guard<std::mutex> lock(checkpointMutex_);
 
         // Fetch the current active transactions from the LogManager
-        // This is a simplified example; you might have a more complex way to determine active transactions
         activeTransactionsAtLastCheckpoint_ = logManager_.GetActiveTransactions();
 
         // Log the checkpoint. This could be a special log record indicating a checkpoint

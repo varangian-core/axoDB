@@ -5,25 +5,23 @@
 #ifndef AXODB_CHECKPOINTMANAGER_H
 #define AXODB_CHECKPOINTMANAGER_H
 
-
 #include <set>
 #include <mutex>
 #include "LogManager.h"
 
-
 namespace axodb {
 
-class CheckpointManager {
-public:
-    CheckpointManager(LogManager& logManager);
-    void CreateCheckpoint();
-    std::set<int> GetActiveTransactionsFromLastCheckpoint();
+    class CheckpointManager {
+    public:
+        CheckpointManager(LogManager& logManager);
+        void CreateCheckpoint();
+        std::set<int> GetActiveTransactionsFromLastCheckpoint() const;
 
-private:
-    LogManager& logManager_;
-    std::set<int> activeTransactionsAtLastCheckpoint_;
-    mutable std::mutex checkpointMutex_;
-};
+    private:
+        LogManager& logManager_;
+        std::set<int> activeTransactionsAtLastCheckpoint_;
+        mutable std::mutex checkpointMutex_;
+    };
 
 }  // namespace axodb
 

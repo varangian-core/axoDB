@@ -23,7 +23,7 @@ namespace axodb {
             if (log.type == LogRecord::LogType::BEGIN) {
                 activeTransactions_.insert(log.transactionId);
             } else if (log.type == LogRecord::LogType::COMMIT || log.type == LogRecord::LogType::ABORT) {
-                activeTransactions_.erase(log.transactionId);
+                    activeTransactions_.erase(log.transactionId);
             }
         }
     }
