@@ -20,7 +20,7 @@ namespace axodb {
 
     class ASTNode {
     public:
-        virtual ~ASTNode() = default;
+        ~ASTNode() = default;
         virtual CRUDOperation getOperationType() = 0;
     };
 
@@ -39,7 +39,7 @@ namespace axodb {
 
     class SelectNode : public ASTNode {
     public :
-        CRUDOperation getOperationType() const override { return CRUDOperation::SELECT; }
+        CRUDOperation getOperationType() const { return CRUDOperation::SELECT; }
 
         std::vector<std::string> columns;
         std::string table;
@@ -49,7 +49,7 @@ namespace axodb {
 
     class InsertNode : public ASTNode {
     public :
-        CRUDOperation getOperationType() const override { return CRUDOperation::INSERT; }
+        CRUDOperation getOperationType() const { return CRUDOperation::INSERT; }
 
         std::string table;
         std::unordered_map<std::string, std::string> columnValues;
@@ -57,7 +57,7 @@ namespace axodb {
 
     class UpdateNode : public ASTNode {
     public:
-        CRUDOperation getOperationType() const override { return CRUDOperation::UPDATE; }
+        CRUDOperation getOperationType() const { return CRUDOperation::UPDATE; }
 
         std::string table;
         std::unordered_map<std::string, std::string> columnValues;
@@ -67,7 +67,7 @@ namespace axodb {
 
     class DeleteNode : public ASTNode {
     public:
-        CRUDOperation getOperationType() const override { return CRUDOperation::DELETE; }
+        CRUDOperation getOperationType() const { return CRUDOperation::DELETE; }
 
         std::string table;
         Expression condition;

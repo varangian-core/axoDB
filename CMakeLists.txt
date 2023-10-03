@@ -40,6 +40,8 @@ target_include_directories(axoDB PRIVATE
         ${PROJECT_SOURCE_DIR}/src/common
         ${PROJECT_SOURCE_DIR}/src/buffer
         ${PROJECT_SOURCE_DIR}/src/concurrency
+        ${PROJECT_SOURCE_DIR}/src/query
+
 )
 
 # Platform-specific dependencies and settings
