@@ -16,19 +16,14 @@ namespace axodb {
     public:
         RecoveryManager(LogManager &logManager);
         void Recover();
-
-
     private:
-
         void Analysis();
-
         void Redo();
-
         void Undo();
-
         LogManager& logManager_;
         std::set<int> activeTransactions_;
     };
-}
+
+}  // namespace axodb
 
 #endif //AXODB_RECOVERYMANAGER_H

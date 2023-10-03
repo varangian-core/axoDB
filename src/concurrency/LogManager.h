@@ -20,9 +20,9 @@ namespace axodb {
         std::string oldValue;
         std::string newValue;
         enum class LogType {
-            INSERT,
-            UPDATE,
-            DELETE,
+            BEGIN,
+            COMMIT,
+            ABORT,
             CHECKPOINT  // Assuming you have a CHECKPOINT type
         } type;
     };
