@@ -21,6 +21,7 @@ namespace axodb {
     class ASTNode {
     public:
         ~ASTNode() = default;
+
         virtual CRUDOperation getOperationType() = 0;
     };
 
@@ -72,5 +73,18 @@ namespace axodb {
         std::string table;
         Expression condition;
     };
+
+
+    class AST {
+    public:
+        AST(ASTNode *rootNode);
+        ~AST();
+
+        ASTNode *getRootNode() const;
+
+    private:
+        ASTNode* rootNode_;
+    };
 }
+
 #endif //AXODB_AST_H
