@@ -18,6 +18,11 @@ namespace axodb {
 
     private:
         std::vector<std::string> tokenize(const std::string &query , const std::string &delim = " ");
+        SelectNode* parseSelect(const std::vector<std::string>& tokens);
+        InsertNode* parseInsert(const std::vector<std::string>& tokens);
+        UpdateNode* parseUpdate(const std::vector<std::string>& tokens);
+        DeleteNode* parseDelete(const std::vector<std::string>& tokens);
+        Expression parseCondition(const std::string& conditionStr);
     };
 }
 
