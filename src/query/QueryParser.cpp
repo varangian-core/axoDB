@@ -12,7 +12,7 @@
 namespace axodb {
     //Looks like I need some Bison work here. Alternative is ANTLR
 
-    ASTNode* QueryParser::parse(const std::string & query) {
+    ASTNode *QueryParser::parse(const std::string &query) {
         auto tokens = tokenize(query);
 
         if (tokens[0] == "SELECT") {
@@ -31,7 +31,7 @@ namespace axodb {
 
     std::vector<std::string> QueryParser::tokenize(const std::string &str, const std::string &delim) {
         std::vector<std::string> tokens;
-        size_t prev = 0, pos  = 0;
+        size_t prev = 0, pos = 0;
         do {
             pos = str.find(delim, prev);
             if (pos == std::string::npos) pos = str.length();
@@ -42,7 +42,7 @@ namespace axodb {
         return tokens;
     }
 
-    SelectNode* QueryParser::parseSelect(const std::vector<std::string>& tokens) {
+    SelectNode *QueryParser::parseSelect(const std::vector<std::string> &tokens) {
         //Covers only: SELECT columns FROM table WHERE condition
         auto selectNode = new SelectNode();
         size_t fromIndex = std::find(tokens.begin(), tokens.end(), "FROM") - tokens.begin();
@@ -60,7 +60,7 @@ namespace axodb {
         return selectNode;
     }
 
-    InsertNode* QueryParser::parseInsert(const std::vector<std::string>& tokens) {
+    InsertNode *QueryParser::parseInsert(const std::vector<std::string> &tokens) {
         //Covers only: INSERT INTO table (columns) VALUES (values)
         auto insertNode = new InsertNode();
         insertNode->table = tokens[2];
@@ -68,19 +68,20 @@ namespace axodb {
         return insertNode;
     }
 
-    UpdateNode* QueryParser::parseUpdate(const std::vector<std::string>& tokens) {
+    UpdateNode *QueryParser::parseUpdate(const std::vector<std::string> &tokens) {
         //Covers only: Update table SET column1 = value1,  ... WHERE condition
         auto updateNode = new UpdateNode();
         updateNode->table = tokens[1];
         size_t setIndex = std::find(tokens.begin(), tokens.end(), "SET") - tokens.begin();
         size_t whereIndex = std::find(tokens.begin(), tokens.end(), "WHERE") - tokens.begin();
 
-        if (whereIndex != tokens.size()){
+        if (whereIndex != tokens.size()) {
             updateNode->condition = parseCondition(tokens[whereIndex + 1]);
-        return updateNode;
+            return updateNode;
+        }
     }
 
-    DeleteNode* QueryParser::parseDelete(const std::vector<std::string>& tokens) {
+    DeleteNode *QueryParser::parseDelete(const std::vector<std::string> &tokens) {
         auto deleteNode = new DeleteNode();
         //Covers only DELETE FROM table WHERE condition
         deleteNode->table = tokens[2];
@@ -91,7 +92,7 @@ namespace axodb {
         return deleteNode;
     }
 
-    Expression QueryParser::parseCondition(const std::string& conditionStr) {
+    Expression QueryParser::parseCondition(const std::string &conditionStr) {
         Expression expr;
         std::size_t pos;
         if ((pos = conditionStr.find("=")) != std::string::npos) {
@@ -112,9 +113,10 @@ namespace axodb {
 
 
         //Remove whitespaces
-        expr.column.erase(expr.column.begin(), std::find_if(expr.column.begin(), expr.column.end(), [](unsigned char ch) {
-            return !std::isspace(ch);
-        }));
+        expr.column.erase(expr.column.begin(),
+                          std::find_if(expr.column.begin(), expr.column.end(), [](unsigned char ch) {
+                              return !std::isspace(ch);
+                          }));
         expr.column.erase(std::find_if(expr.column.rbegin(), expr.column.rend(), [](unsigned char ch) {
             return !std::isspace(ch);
         }).base(), expr.column.end());

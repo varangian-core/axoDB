@@ -32,7 +32,9 @@ add_executable(axoDB ${SOURCES}
         src/query/QueryParser.cpp
         src/query/QueryParser.h
         src/query/AST.cpp
-        src/query/AST.h)
+        src/query/AST.h
+        src/query/IndexManager.cpp
+        src/query/IndexManager.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE

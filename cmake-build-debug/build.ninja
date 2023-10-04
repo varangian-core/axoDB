@@ -52,147 +52,154 @@ build cmake_object_order_depends_target_axoDB: phony || CMakeFiles/axoDB.dir
 build CMakeFiles/axoDB.dir/src/buffer/BufferPoolManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/buffer/BufferPoolManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\buffer\BufferPoolManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\buffer
 
 build CMakeFiles/axoDB.dir/src/buffer/DiskManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/buffer/DiskManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\buffer\DiskManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\buffer
 
 build CMakeFiles/axoDB.dir/src/buffer/Page.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/buffer/Page.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\buffer\Page.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\buffer
 
 build CMakeFiles/axoDB.dir/src/common/Allocator.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Allocator.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Allocator.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/BTreeIndex.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/BTreeIndex.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\BTreeIndex.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/Btree.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Btree.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Btree.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/Buffer.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Buffer.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Buffer.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/BufferFrame.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/BufferFrame.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\BufferFrame.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/FileHandle.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/FileHandle.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\FileHandle.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/Index.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Index.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Index.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/common/Node.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Node.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Node.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
 build CMakeFiles/axoDB.dir/src/concurrency/CheckpointManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/CheckpointManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\CheckpointManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/concurrency/LockManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/LockManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\LockManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/concurrency/LogManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/LogManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\LogManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/concurrency/RecoveryManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/RecoveryManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\RecoveryManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/concurrency/TimestampManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/TimestampManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\TimestampManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/concurrency/TransactionManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/TransactionManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\TransactionManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/concurrency/VersionManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency/VersionManager.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\concurrency\VersionManager.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\concurrency
 
 build CMakeFiles/axoDB.dir/src/main.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/main.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src
 
 build CMakeFiles/axoDB.dir/src/query/AST.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/query/AST.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\query\AST.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
+  OBJECT_DIR = CMakeFiles\axoDB.dir
+  OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\query
+
+build CMakeFiles/axoDB.dir/src/query/IndexManager.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/query/IndexManager.cpp || cmake_object_order_depends_target_axoDB
+  DEP_FILE = CMakeFiles\axoDB.dir\src\query\IndexManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\query
 
 build CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/query/QueryParser.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\query\QueryParser.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\query
 
@@ -204,7 +211,7 @@ build CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj: CXX_COMPILER__axoDB_un
 #############################################
 # Link the executable axoDB.exe
 
-build axoDB.exe: CXX_EXECUTABLE_LINKER__axoDB_Debug CMakeFiles/axoDB.dir/src/buffer/BufferPoolManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/DiskManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/Page.cpp.obj CMakeFiles/axoDB.dir/src/common/Allocator.cpp.obj CMakeFiles/axoDB.dir/src/common/BTreeIndex.cpp.obj CMakeFiles/axoDB.dir/src/common/Btree.cpp.obj CMakeFiles/axoDB.dir/src/common/Buffer.cpp.obj CMakeFiles/axoDB.dir/src/common/BufferFrame.cpp.obj CMakeFiles/axoDB.dir/src/common/FileHandle.cpp.obj CMakeFiles/axoDB.dir/src/common/Index.cpp.obj CMakeFiles/axoDB.dir/src/common/Node.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/CheckpointManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LockManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LogManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/RecoveryManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TimestampManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TransactionManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/VersionManager.cpp.obj CMakeFiles/axoDB.dir/src/main.cpp.obj CMakeFiles/axoDB.dir/src/query/AST.cpp.obj CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj
+build axoDB.exe: CXX_EXECUTABLE_LINKER__axoDB_Debug CMakeFiles/axoDB.dir/src/buffer/BufferPoolManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/DiskManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/Page.cpp.obj CMakeFiles/axoDB.dir/src/common/Allocator.cpp.obj CMakeFiles/axoDB.dir/src/common/BTreeIndex.cpp.obj CMakeFiles/axoDB.dir/src/common/Btree.cpp.obj CMakeFiles/axoDB.dir/src/common/Buffer.cpp.obj CMakeFiles/axoDB.dir/src/common/BufferFrame.cpp.obj CMakeFiles/axoDB.dir/src/common/FileHandle.cpp.obj CMakeFiles/axoDB.dir/src/common/Index.cpp.obj CMakeFiles/axoDB.dir/src/common/Node.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/CheckpointManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LockManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LogManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/RecoveryManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TimestampManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TransactionManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/VersionManager.cpp.obj CMakeFiles/axoDB.dir/src/main.cpp.obj CMakeFiles/axoDB.dir/src/query/AST.cpp.obj CMakeFiles/axoDB.dir/src/query/IndexManager.cpp.obj CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\axoDB.dir
