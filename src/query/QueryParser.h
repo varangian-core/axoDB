@@ -13,11 +13,11 @@ namespace axodb {
 
     class QueryParser {
     public:
-        AST parse(const std::string &query);
+        ASTNode* parse(const std::string &query);
 
 
     private:
-        std::vector<std::string> split(const std::string &str, const std::string &delim);
+        std::vector<std::string> tokenize(const std::string &query , const std::string &delim = " ");
     };
 }
 

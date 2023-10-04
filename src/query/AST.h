@@ -22,7 +22,7 @@ namespace axodb {
     public:
         ~ASTNode() = default;
 
-        virtual CRUDOperation getOperationType() = 0;
+        virtual CRUDOperation getOperationType() const = 0;
     };
 
     class Expression {

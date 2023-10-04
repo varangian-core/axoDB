@@ -9,27 +9,30 @@
 
 
 namespace axodb {
-    AST QueryParser::parse(const std::string& query) {
-        AST ast;
-        std::vector<std::string> tokens = tokenize(query);
-        if (tokens.size() >= 4 && tokens[0] == "SELECT" && tokens[2] == "FROM") {
-            ast.operation = AST::Operation::SELECT;
-            ast.columns.push_back(tokens[1]);
-            ast.table = tokens[3];
+    ASTNode *QueryParser::parse(const std::string &query) {
+        //TODO: work through parse logic here
+        auto tokens = tokenize(query);
+        if (tokens[0] == "SELECT") {
+            SelectNode *node = new SelectNode();
+            node->columns.push_back("*"); //not sure
+            node->table = tokens[3];
+            return node;
         }
-        return ast;
+
+        return nullptr;
     }
 
 
-
-    std::vector<std::string> QueryParser::tokenize(const std::string& query){
+    std::vector<std::string> QueryParser::tokenize(const std::string &str, const std::string &delim) {
         std::vector<std::string> tokens;
-        std::string token;
-        std::istringstream tokenStream(query);
-
-        while (std::getline(tokenStream, token, ' ') {
-            tokens.push_back(token);
-        }
-        return token;
+        size_t prev = 0, pos  = 0;
+        do {
+            pos = str.find(delim, prev);
+            if (pos == std::string::npos) pos = str.length();
+            std::string token = str.substr(prev, pos - prev);
+            if (!token.empty()) tokens.push_back(token);
+            prev = pos + delim.length();
+        } while (pos < str.length() && prev < str.length());
+        return tokens;
     }
-}; // namespace axodb
+} // namespace axodb
