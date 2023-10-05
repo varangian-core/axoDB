@@ -20,8 +20,7 @@ namespace axodb {
     private:
         std::vector<bool> bits_;
     };
-
+}
 
 #endif //AXODB_BITMAP_H
 
-}
