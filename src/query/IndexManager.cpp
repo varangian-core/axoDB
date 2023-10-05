@@ -4,47 +4,42 @@
 
 #include "IndexManager.h"
 
-namespace  axodb {
+namespace axodb {
 
     IndexManager::IndexManager() {}
 
-    //TODO: add indexMap, BitMapIndex, and BitMap to the namespace
     IndexManager::~IndexManager() {
-        //Delete BitMapIndex pointers
-        for (auto &tableEntry: indexMap) {
+        for (auto &tableEntry: index_table_) {
             for (auto &columnEntry: tableEntry.second) {
                 delete columnEntry.second;
             }
         }
     }
 
-
     void IndexManager::createBitmapIndex(const std::string &tableName, const std::string &columnName) {
-        if (indexMap[tableName].find(columnName) == indexMap[tableName].end()) {
-            indexMap[tableName][columnName] = new BitMapIndex();
+        if (index_table_[tableName].find(columnName) == index_table_[tableName].end()) {
+            index_table_[tableName][columnName] = new BitMapIndex();
         }
     }
-
 
     void IndexManager::deleteBitmapIndex(const std::string &tableName, const std::string &columnName) {
-        if (indexMap[tableName].find(columnName) != indexMap[tableName].end()) {
-            delete indexMap[tableName][columnName];
-            indexMap[tableName].erase(columnName);
+        if (index_table_[tableName].find(columnName) != index_table_[tableName].end()) {
+            delete index_table_[tableName][columnName];
+            index_table_[tableName].erase(columnName);
         }
     }
 
-    void IndexManager::insertValue(const std::string &tableName, const std::string &indexName, const std::string &value,
-                                   int recordId) {
-        if (indexMap[tableName].find(indexName) != indexMap[tableName].end()) {
-            indexMap[tableName][indexName]->insert(value, recordId);
+    void IndexManager::insertValue(const std::string &tableName, const std::string &indexName, const std::string &value, int recordId) {
+        if (index_table_[tableName].find(indexName) != index_table_[tableName].end()) {
+            index_table_[tableName][indexName]->insert(value, recordId);
         }
     }
 
-    void
-    IndexManager::searchValue(const std::string &tableName, const std::string &indexName, const std::string &value) {
-        if (indexMap[tableName].find(indexName) != indexMap[tableName].end()) {
-            indexMap[tableName][indexName]->search(value);
+    BitMap IndexManager::searchValue(const std::string &tableName, const std::string &indexName, const std::string &value) {
+        if (index_table_[tableName].find(indexName) != index_table_[tableName].end()) {
+            return index_table_[tableName][indexName]->search(value);
         }
+        return BitMap();  // Return an empty BitMap if not found.
     }
 
 } //namespace axodb

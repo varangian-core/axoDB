@@ -6,9 +6,9 @@
 
 
 namespace axodb {
-    BitMap::BitMap() {}
+    BitMapIndex::BitMapIndex() {}
+    BitMapIndex::~BitMapIndex() {}
 
-    BitMap::~BitMap() {}
 
 void BitMapIndex::insert(const std::string& value, int recordId) {
     index_[value].setBit(recordId, true);

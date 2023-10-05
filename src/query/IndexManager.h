@@ -8,22 +8,30 @@
 
 #include <string>
 #include <unordered_map>
-#include "/common/BitMapIndex.h"
-#include "BitMap.h"
+#include "../common/BitMap.h"
+#include "../common/BitMapIndex.h"
 
-class IndexManager {
-public:
-    IndexManager();
-    ~IndexManager();
+class BitMapIndex;
 
-    void createBitmapIndex(const std::string& tableName, const std::string& columnName);
-    void deleteBitmapIndex(const std::string& tableName, const std::string& columnName);
-    void insertValue(const std::string& tableName, const std::string& indexName, const std::string& value, int recordId);
-    BitMap searchValue(const std::string& tableName, const std::string& indexName, const std::string& value); //Do I need indexName here?
+namespace axodb {
+    class IndexManager {
+    public:
+        IndexManager();
 
-private:
-    std::unordered_map<std::string, std::unordered_map<std::string, BitmapIndex*>> IndexMap; //tableName -> columnName -> BitMap
-    }
+        ~IndexManager();
+
+        void createBitmapIndex(const std::string &tableName, const std::string &columnName);
+
+        void deleteBitmapIndex(const std::string &tableName, const std::string &columnName);
+
+        void insertValue(const std::string &tableName, const std::string &indexName, const std::string &value, int recordId);
+
+        BitMap searchValue(const std::string &tableName, const std::string &indexName, const std::string &value);
+
+    private:
+        std::unordered_map<std::string, std::unordered_map<std::string, BitMapIndex* >> index_table_;
+
+    };
 
 }; //namespace axodb
 

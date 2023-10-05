@@ -16,7 +16,7 @@ namespace axodb {
     class BitMapIndex {
     public:
         BitMapIndex();
-
+        ~BitMapIndex();
 
         void insert(const std::string& value, int recordId);
         BitMap search(const std::string& value) const;
