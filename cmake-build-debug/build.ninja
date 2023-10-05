@@ -84,6 +84,20 @@ build CMakeFiles/axoDB.dir/src/common/BTreeIndex.cpp.obj: CXX_COMPILER__axoDB_un
   OBJECT_DIR = CMakeFiles\axoDB.dir
   OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
 
+build CMakeFiles/axoDB.dir/src/common/BitMap.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/BitMap.cpp || cmake_object_order_depends_target_axoDB
+  DEP_FILE = CMakeFiles\axoDB.dir\src\common\BitMap.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
+  OBJECT_DIR = CMakeFiles\axoDB.dir
+  OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
+
+build CMakeFiles/axoDB.dir/src/common/BitMapIndex.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/BitMapIndex.cpp || cmake_object_order_depends_target_axoDB
+  DEP_FILE = CMakeFiles\axoDB.dir\src\common\BitMapIndex.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
+  OBJECT_DIR = CMakeFiles\axoDB.dir
+  OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
+
 build CMakeFiles/axoDB.dir/src/common/Btree.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Btree.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Btree.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -114,6 +128,13 @@ build CMakeFiles/axoDB.dir/src/common/FileHandle.cpp.obj: CXX_COMPILER__axoDB_un
 
 build CMakeFiles/axoDB.dir/src/common/Index.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/Index.cpp || cmake_object_order_depends_target_axoDB
   DEP_FILE = CMakeFiles\axoDB.dir\src\common\Index.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
+  OBJECT_DIR = CMakeFiles\axoDB.dir
+  OBJECT_FILE_DIR = CMakeFiles\axoDB.dir\src\common
+
+build CMakeFiles/axoDB.dir/src/common/IndexMap.cpp.obj: CXX_COMPILER__axoDB_unscanned_Debug C$:/Users/Yormingandr/CLionProjects/axoDB/src/common/IndexMap.cpp || cmake_object_order_depends_target_axoDB
+  DEP_FILE = CMakeFiles\axoDB.dir\src\common\IndexMap.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -IC:/Users/Yormingandr/CLionProjects/axoDB/src -IC:/Users/Yormingandr/CLionProjects/axoDB/src/common -IC:/Users/Yormingandr/CLionProjects/axoDB/src/buffer -IC:/Users/Yormingandr/CLionProjects/axoDB/src/concurrency -IC:/Users/Yormingandr/CLionProjects/axoDB/src/query
   OBJECT_DIR = CMakeFiles\axoDB.dir
@@ -211,7 +232,7 @@ build CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj: CXX_COMPILER__axoDB_un
 #############################################
 # Link the executable axoDB.exe
 
-build axoDB.exe: CXX_EXECUTABLE_LINKER__axoDB_Debug CMakeFiles/axoDB.dir/src/buffer/BufferPoolManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/DiskManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/Page.cpp.obj CMakeFiles/axoDB.dir/src/common/Allocator.cpp.obj CMakeFiles/axoDB.dir/src/common/BTreeIndex.cpp.obj CMakeFiles/axoDB.dir/src/common/Btree.cpp.obj CMakeFiles/axoDB.dir/src/common/Buffer.cpp.obj CMakeFiles/axoDB.dir/src/common/BufferFrame.cpp.obj CMakeFiles/axoDB.dir/src/common/FileHandle.cpp.obj CMakeFiles/axoDB.dir/src/common/Index.cpp.obj CMakeFiles/axoDB.dir/src/common/Node.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/CheckpointManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LockManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LogManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/RecoveryManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TimestampManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TransactionManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/VersionManager.cpp.obj CMakeFiles/axoDB.dir/src/main.cpp.obj CMakeFiles/axoDB.dir/src/query/AST.cpp.obj CMakeFiles/axoDB.dir/src/query/IndexManager.cpp.obj CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj
+build axoDB.exe: CXX_EXECUTABLE_LINKER__axoDB_Debug CMakeFiles/axoDB.dir/src/buffer/BufferPoolManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/DiskManager.cpp.obj CMakeFiles/axoDB.dir/src/buffer/Page.cpp.obj CMakeFiles/axoDB.dir/src/common/Allocator.cpp.obj CMakeFiles/axoDB.dir/src/common/BTreeIndex.cpp.obj CMakeFiles/axoDB.dir/src/common/BitMap.cpp.obj CMakeFiles/axoDB.dir/src/common/BitMapIndex.cpp.obj CMakeFiles/axoDB.dir/src/common/Btree.cpp.obj CMakeFiles/axoDB.dir/src/common/Buffer.cpp.obj CMakeFiles/axoDB.dir/src/common/BufferFrame.cpp.obj CMakeFiles/axoDB.dir/src/common/FileHandle.cpp.obj CMakeFiles/axoDB.dir/src/common/Index.cpp.obj CMakeFiles/axoDB.dir/src/common/IndexMap.cpp.obj CMakeFiles/axoDB.dir/src/common/Node.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/CheckpointManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LockManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/LogManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/RecoveryManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TimestampManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/TransactionManager.cpp.obj CMakeFiles/axoDB.dir/src/concurrency/VersionManager.cpp.obj CMakeFiles/axoDB.dir/src/main.cpp.obj CMakeFiles/axoDB.dir/src/query/AST.cpp.obj CMakeFiles/axoDB.dir/src/query/IndexManager.cpp.obj CMakeFiles/axoDB.dir/src/query/QueryParser.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\axoDB.dir

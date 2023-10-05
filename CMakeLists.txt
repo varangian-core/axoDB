@@ -34,7 +34,13 @@ add_executable(axoDB ${SOURCES}
         src/query/AST.cpp
         src/query/AST.h
         src/query/IndexManager.cpp
-        src/query/IndexManager.h)
+        src/query/IndexManager.h
+        src/common/IndexMap.cpp
+        src/common/IndexMap.h
+        src/common/BitMap.cpp
+        src/common/BitMap.h
+        src/common/BitMapIndex.cpp
+        src/common/BitMapIndex.h)
 
 # Add the include directories for your project
 target_include_directories(axoDB PRIVATE

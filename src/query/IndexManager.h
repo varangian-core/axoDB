@@ -8,6 +8,8 @@
 
 #include <string>
 #include <unordered_map>
+#include "/common/BitMapIndex.h"
+#include "BitMap.h"
 
 class IndexManager {
 public:
@@ -20,7 +22,7 @@ public:
     BitMap searchValue(const std::string& tableName, const std::string& indexName, const std::string& value); //Do I need indexName here?
 
 private:
-    std::unordered_map<std::string, std::unordered_map<std::string, BitmapIndex*>> indexTable_; //tableName -> columnName -> BitMap
+    std::unordered_map<std::string, std::unordered_map<std::string, BitmapIndex*>> IndexMap; //tableName -> columnName -> BitMap
     }
 
 }; //namespace axodb
